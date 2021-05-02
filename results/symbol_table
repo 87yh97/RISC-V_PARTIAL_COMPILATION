@@ -1,0 +1,33 @@
+
+main.o:     file format elf32-littleriscv
+
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+0000001a l       .text	00000000 .L2
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 g     F .text	00000048 main
+00000000         *UND*	00000000 calloc
+00000000         *UND*	00000000 reverse
+00000000         *UND*	00000000 free
+
+
+
+reverse.o:     file format elf32-littleriscv
+
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 reverse.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000042 l       .text	00000000 .L1
+00000010 l       .text	00000000 .L3
+00000022 l       .text	00000000 .L4
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 g     F .text	00000044 reverse
+
+

@@ -1,0 +1,25 @@
+
+a.out:     file format elf32-littleriscv
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000e8a  00010074  00010074  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .eh_frame     00000004  00011000  00011000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .init_array   00000008  00011004  00011004  00001004  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .fini_array   00000004  0001100c  0001100c  0000100c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .data         00000830  00011010  00011010  00001010  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .sdata        00000014  00011840  00011840  00001840  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .sbss         00000014  00011854  00011854  00001854  2**2
+                  ALLOC
+  7 .bss          00000044  00011868  00011868  00001854  2**2
+                  ALLOC
+  8 .comment      00000030  00000000  00000000  00001854  2**0
+                  CONTENTS, READONLY
+  9 .riscv.attributes 00000026  00000000  00000000  00001884  2**0
+                  CONTENTS, READONLY

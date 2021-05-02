@@ -1,0 +1,99 @@
+
+a.out:     file format elf32-littleriscv
+
+SYMBOL TABLE:
+00010074 l    d  .text	00000000 .text
+00011000 l    d  .eh_frame	00000000 .eh_frame
+00011004 l    d  .init_array	00000000 .init_array
+0001100c l    d  .fini_array	00000000 .fini_array
+00011010 l    d  .data	00000000 .data
+00011840 l    d  .sdata	00000000 .sdata
+00011854 l    d  .sbss	00000000 .sbss
+00011868 l    d  .bss	00000000 .bss
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    df *ABS*	00000000 __call_atexit.c
+00010074 l     F .text	00000014 register_fini
+00000000 l    df *ABS*	00000000 crtstuff.c
+00011000 l     O .eh_frame	00000000 
+000100c2 l     F .text	00000000 __do_global_dtors_aux
+00011868 l     O .bss	00000001 completed.1
+0001100c l     O .fini_array	00000000 __do_global_dtors_aux_fini_array_entry
+000100f6 l     F .text	00000000 frame_dummy
+0001186c l     O .bss	00000018 object.0
+00011008 l     O .init_array	00000000 __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 reverse.c
+00000000 l    df *ABS*	00000000 calloc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 errno.c
+00000000 l    df *ABS*	00000000 exit.c
+00000000 l    df *ABS*	00000000 impure.c
+00011010 l     O .data	00000428 impure_data
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 malloc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 mlock.c
+00000000 l    df *ABS*	00000000 sbrkr.c
+00000000 l    df *ABS*	00000000 fini.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 reent.c
+00000000 l    df *ABS*	00000000 atexit.c
+00000000 l    df *ABS*	00000000 __atexit.c
+00000000 l    df *ABS*	00000000 sys_exit.c
+00000000 l    df *ABS*	00000000 sys_sbrk.c
+00011864 l     O .sbss	00000004 heap_end.0
+00000000 l    df *ABS*	00000000 crtstuff.c
+00011000 l     O .eh_frame	00000000 __FRAME_END__
+00000000 l    df *ABS*	00000000 
+00011010 l       .fini_array	00000000 __fini_array_end
+0001100c l       .fini_array	00000000 __fini_array_start
+0001100c l       .init_array	00000000 __init_array_end
+00011004 l       .init_array	00000000 __preinit_array_end
+00011004 l       .init_array	00000000 __init_array_start
+00011004 l       .init_array	00000000 __preinit_array_start
+00010d1c g     F .text	00000058 cleanup_glue
+00011810 g       *ABS*	00000000 __global_pointer$
+00010920 g     F .text	00000002 __malloc_unlock
+00010148 g     F .text	00000044 reverse
+00010238 g     F .text	00000006 __errno
+00011860 g     O .sbss	00000004 errno
+00011840 g       .sdata	00000000 __SDATA_BEGIN__
+000102c4 g     F .text	00000008 malloc
+0001185c g     O .sbss	00000004 __malloc_top_pad
+00011844 g     O .sdata	00000000 .hidden __dso_handle
+00010922 g     F .text	0000002e _sbrk_r
+00011858 g     O .sbss	00000004 __malloc_max_sbrked_mem
+00011840 g     O .sdata	00000004 _global_impure_ptr
+0001025a g     F .text	0000006a __libc_init_array
+00010eae g     F .text	00000050 _sbrk
+00010a0e g     F .text	00000038 __libc_fini_array
+00010d74 g     F .text	000000a2 _reclaim_reent
+0001018c g     F .text	0000000a calloc
+00010b04 g     F .text	00000218 _free_r
+00010950 g     F .text	000000be __call_exitprocs
+0001184c g     O .sdata	00000004 __malloc_sbrk_base
+00010088 g     F .text	0000003a _start
+00010e20 g     F .text	0000006c __register_exitproc
+00011884 g     O .bss	00000028 __malloc_current_mallinfo
+000118b0 g       .bss	00000000 __BSS_END__
+00011438 g     O .data	00000408 __malloc_av_
+0001091e g     F .text	00000002 __malloc_lock
+00010196 g     F .text	000000a2 _calloc_r
+00011854 g       .sbss	00000000 __bss_start
+00010876 g     F .text	000000a8 memset
+00010112 g     F .text	00000036 main
+00011854 g     O .sbss	00000004 __malloc_max_total_mem
+000102d6 g     F .text	000005a0 _malloc_r
+00010a46 g     F .text	000000be _malloc_trim_r
+00010e16 g     F .text	0000000a atexit
+00011848 g     O .sdata	00000004 _impure_ptr
+00011010 g       .data	00000000 __DATA_BEGIN__
+00011854 g       .sdata	00000000 _edata
+000118b0 g       .bss	00000000 _end
+00011850 g     O .sdata	00000004 __malloc_trim_threshold
+0001023e g     F .text	0000001c exit
+00010e8c g     F .text	00000022 _exit
+000102cc g     F .text	0000000a free
+
+

@@ -1,0 +1,36 @@
+
+reverse.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <reverse>:
+   0:	4785                	c.li	a5,1
+   2:	04b7d063          	bge	a5,a1,42 <.L1>
+   6:	02b668b3          	rem	a7,a2,a1
+   a:	c299                	c.beqz	a3,10 <.L3>
+   c:	411588b3          	sub	a7,a1,a7
+
+00000010 <.L3>:
+  10:	02b8e7b3          	rem	a5,a7,a1
+  14:	00052803          	lw	a6,0(a0)
+  18:	00279713          	slli	a4,a5,0x2
+  1c:	972a                	c.add	a4,a0
+  1e:	4310                	c.lw	a2,0(a4)
+  20:	4681                	c.li	a3,0
+
+00000022 <.L4>:
+  22:	00279713          	slli	a4,a5,0x2
+  26:	972a                	c.add	a4,a0
+  28:	01072023          	sw	a6,0(a4)
+  2c:	97c6                	c.add	a5,a7
+  2e:	02b7e7b3          	rem	a5,a5,a1
+  32:	8832                	c.mv	a6,a2
+  34:	00279713          	slli	a4,a5,0x2
+  38:	972a                	c.add	a4,a0
+  3a:	4310                	c.lw	a2,0(a4)
+  3c:	0685                	c.addi	a3,1
+  3e:	fed592e3          	bne	a1,a3,22 <.L4>
+
+00000042 <.L1>:
+  42:	8082                	c.jr	ra

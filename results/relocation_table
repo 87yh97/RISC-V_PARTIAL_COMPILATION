@@ -1,0 +1,24 @@
+
+main.o:     file format elf32-littleriscv
+
+RELOCATION RECORDS FOR [.text]:
+OFFSET   TYPE              VALUE 
+0000000a R_RISCV_CALL      calloc
+0000000a R_RISCV_RELAX     *ABS*
+0000002c R_RISCV_CALL      reverse
+0000002c R_RISCV_RELAX     *ABS*
+00000036 R_RISCV_CALL      free
+00000036 R_RISCV_RELAX     *ABS*
+00000020 R_RISCV_BRANCH    .L2
+
+
+
+reverse.o:     file format elf32-littleriscv
+
+RELOCATION RECORDS FOR [.text]:
+OFFSET   TYPE              VALUE 
+00000002 R_RISCV_BRANCH    .L1
+0000000a R_RISCV_RVC_BRANCH  .L3
+0000003e R_RISCV_BRANCH    .L4
+
+

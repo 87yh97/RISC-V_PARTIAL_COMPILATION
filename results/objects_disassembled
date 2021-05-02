@@ -1,0 +1,74 @@
+
+main.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	1141                	c.addi	sp,-16
+   2:	c606                	c.swsp	ra,12(sp)
+   4:	c422                	c.swsp	s0,8(sp)
+   6:	4591                	c.li	a1,4
+   8:	452d                	c.li	a0,11
+   a:	00000097          	auipc	ra,0x0
+   e:	000080e7          	jalr	ra,0(ra) # a <main+0xa>
+  12:	842a                	c.mv	s0,a0
+  14:	872a                	c.mv	a4,a0
+  16:	4781                	c.li	a5,0
+  18:	46ad                	c.li	a3,11
+
+0000001a <.L2>:
+  1a:	c31c                	c.sw	a5,0(a4)
+  1c:	0785                	c.addi	a5,1
+  1e:	0711                	c.addi	a4,4
+  20:	fed79de3          	bne	a5,a3,1a <.L2>
+  24:	4685                	c.li	a3,1
+  26:	460d                	c.li	a2,3
+  28:	45ad                	c.li	a1,11
+  2a:	8522                	c.mv	a0,s0
+  2c:	00000097          	auipc	ra,0x0
+  30:	000080e7          	jalr	ra,0(ra) # 2c <.L2+0x12>
+  34:	8522                	c.mv	a0,s0
+  36:	00000097          	auipc	ra,0x0
+  3a:	000080e7          	jalr	ra,0(ra) # 36 <.L2+0x1c>
+  3e:	4501                	c.li	a0,0
+  40:	40b2                	c.lwsp	ra,12(sp)
+  42:	4422                	c.lwsp	s0,8(sp)
+  44:	0141                	c.addi	sp,16
+  46:	8082                	c.jr	ra
+
+reverse.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <reverse>:
+   0:	4785                	c.li	a5,1
+   2:	04b7d063          	bge	a5,a1,42 <.L1>
+   6:	02b668b3          	rem	a7,a2,a1
+   a:	c299                	c.beqz	a3,10 <.L3>
+   c:	411588b3          	sub	a7,a1,a7
+
+00000010 <.L3>:
+  10:	02b8e7b3          	rem	a5,a7,a1
+  14:	00052803          	lw	a6,0(a0)
+  18:	00279713          	slli	a4,a5,0x2
+  1c:	972a                	c.add	a4,a0
+  1e:	4310                	c.lw	a2,0(a4)
+  20:	4681                	c.li	a3,0
+
+00000022 <.L4>:
+  22:	00279713          	slli	a4,a5,0x2
+  26:	972a                	c.add	a4,a0
+  28:	01072023          	sw	a6,0(a4)
+  2c:	97c6                	c.add	a5,a7
+  2e:	02b7e7b3          	rem	a5,a5,a1
+  32:	8832                	c.mv	a6,a2
+  34:	00279713          	slli	a4,a5,0x2
+  38:	972a                	c.add	a4,a0
+  3a:	4310                	c.lw	a2,0(a4)
+  3c:	0685                	c.addi	a3,1
+  3e:	fed592e3          	bne	a1,a3,22 <.L4>
+
+00000042 <.L1>:
+  42:	8082                	c.jr	ra
